@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/loginstyle.css">
     <title>Login</title>
 </head>
+
 <body>
     <header>
 
     </header>
 
     <main>
-
-    </main> 
-
-    <footer>
-        <section>
-            <img src="Img/logo_instadev.png" alt="Logo">
-
-            <form action="" method="POST">
-                <div>
-                    <label for="Email">Email</label>
-                    <input type="email" name="Email" required>
+        <section class="grid container_login">
+            <div>
+                <div class="container_logo">
+                    <img class="logo" src="Img/logo_instadev.png" alt="Logo">
                 </div>
-                <div>
-                    <label for="Senha">Senha</label>
-                    <input type="password" name="Senha" required>
+                <form class="container_form" action="" method="POST">
+                    <div class="campo">
+                        <label class="label_form" for="Email">Email</label>
+                        <input class="input_form" type="email" name="Email" required>
+                    </div>
+                    <div class="campo">
+                        <label class="label_form" for="Senha">Senha</label>
+                        <input class="input_form" type="password" name="Senha" required>
+                    </div>
+                    <button class="btn" type="submit">Entrar</button>
+                </form>
+                <div class="extras">
+                    <span>
+                        <hr>Ou
+                        <hr>
+                    </span>
+                    <a href="#">Esqueceu a Senha?</a>
                 </div>
-                <button type="submit">Entrar</button>
-            </form>
-            <div>
-                <span>----------------Ou----------------</span>
-                <a href="#">Esqueceu a Senha?</a>
-            </div>
-            <div>
-                <span>Não tem uma conta? <a href="#">Cadastre-se</a></span>
-            </div>
-            <div>
-                <span>Obtenha o aplicativo</span>
-                <img src="Img/app_store 1.png" alt="App Store">
-                <img src="Img/google_play 1.png" alt="Play Store">
+                <div class="extras">
+                    <span>Não tem uma conta? <a href="#">Cadastre-se</a></span>
+                </div>
+                <div class="download">
+                    <span>Obtenha o aplicativo</span>
+                    <img src="Img/app_store 1.png" alt="App Store">
+                    <img src="Img/google_play 1.png" alt="Play Store">
+                </div>
             </div>
         </section>
+    </main>
+
+    <footer>
+
     </footer>
 </body>
+
 </html>
