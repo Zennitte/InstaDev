@@ -15,37 +15,42 @@
     </header>
 
     <main>
-        <section class="grid container_login">
-            <div>
+        <section class="grid container">
+            <div class="container_login">
                 <div class="container_logo">
-                    <img class="logo" src="Img/logo_instadev.png" alt="Logo">
+                    <img class="logo" src="Img/Instadev.svg" alt="Logo">
                 </div>
                 <form class="container_form" action="" method="POST">
-                    <div class="campo">
-                        <label class="label_form" for="Email"></label>
-                        <input class="input_form" placeholder="Email" type="email" name="Email" required>
-                    </div>
-                    <div class="campo">
-                        <label class="label_form" for="Senha"></label>
-                        <input class="input_form" placeholder="Senha" type="password" name="Senha" required>
-                    </div>
+
+                    <label for="Email"></label>
+                    <input class="campo" placeholder="Email" type="email" name="Email" required>
+
+                    <label for="Senha"></label>
+                    <input class="campo" placeholder="Senha" type="password" name="Senha" required>
+
                     <button class="btn" type="submit">Entrar</button>
 
-                    <div class="recuperar_senha">
-                        <span><hr>Ou<hr></span>
-                        <a href="#">Esqueceu a Senha?</a>
-                    </div>
                 </form>
-                <div class="extras">
-                    <span>Não tem uma conta? <a href="#">Cadastre-se</a></span>
-                </div>
-                <div class="download">
-                    <span>Obtenha o aplicativo</span>
-                    <img src="Img/app_store 1.png" alt="App Store">
-                    <img src="Img/google_play 1.png" alt="Play Store">
+                <div class="container_recuperar">
+                    <div class="ajustar">
+                        <hr class="linha">
+                        <span class="texto_linha">Ou</span>
+                        <hr class="linha">
+                    </div>
+                    <a class="recuperar_link" href="#">Esqueceu a Senha?</a>
                 </div>
             </div>
         </section>
+        <div class="grid container_cadastrar">
+            <span class="cadastrar_span">Não tem uma conta? <a class="cadastrar_link" href="#">Cadastre-se</a></span>
+        </div>
+        <div class="grid container_links">
+            <span class="links_span">Obtenha o aplicativo</span>
+            <div>
+                <img src="Img/app_store 1.png" alt="App Store">
+                <img src="Img/google_play 1.png" alt="Play Store">
+            </div>
+        </div>
     </main>
 
     <footer>
