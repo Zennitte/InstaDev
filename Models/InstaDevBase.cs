@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace InstaDevBase.Models
+namespace InstaDev.Models
 {
     public class InstaDevBase
     {
