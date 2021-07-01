@@ -34,7 +34,6 @@ header {
 
 .pesquisa {
     border: none;
-    border: none;
     width: 29%;
     background: none;
     padding-left: 5px;
@@ -307,3 +306,27 @@ header {
     font-size: 13px;
     color: #909090;
 }
+
+/* footer */
+
+footer{
+    background-color: #E5E5E5;
+}
+
+.container_footer {
+    background-color: #E5E5E5;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 37px;
+}
+
+.container_footer small {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+}
+
