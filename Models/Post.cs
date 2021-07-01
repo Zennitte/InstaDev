@@ -26,7 +26,7 @@ namespace InstaDev.Models
         }
 
 
-        public string Preparar(Post post){
+        private string Preparar(Post post){
 
             return $"{post.IdUsuario};{post.IdPost};{post.Titulo};{post.Texto};{post.Imagem}";
         }
@@ -79,6 +79,5 @@ namespace InstaDev.Models
         }
 
         // CLASSE FEITA
-
     }
 }
