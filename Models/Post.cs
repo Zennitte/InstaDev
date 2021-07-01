@@ -6,7 +6,7 @@ using InstaDev.Interfaces;
 
 namespace InstaDev.Models
 {
-    public class Post : IPost
+    public class Post : InstaDevBase ,IPost
     {
         private int IdUsuario { get; set; }
         
@@ -22,7 +22,7 @@ namespace InstaDev.Models
 
         public Post(){
 
-            // Colocar método quando base estiver pronta.
+            CriarPastaEArquivo(PATH);
         }
 
 
@@ -40,12 +40,17 @@ namespace InstaDev.Models
 
         public void Deletar(Post post)
         {
-            
+            List<string> linhas = LerTodasLinhasCSV (PATH);
+            linhas.RemoveAll(x => x.Split(";")[1] == post.IdPost.ToString());
+            ReescreverCSV(PATH, linhas);
         }
 
         public void Alterar(Post post)
         {
-            throw new System.NotImplementedException();
+            List<string> linhas = LerTodasLinhasCSV (PATH);
+            linhas.RemoveAll(x => x.Split(";")[1] == post.IdPost.ToString());
+            linhas.Add(Preparar(post));
+            ReescreverCSV(PATH, linhas);
         }
 
         public List<Post> Listar(Post post)
@@ -73,6 +78,7 @@ namespace InstaDev.Models
 
         }
 
+        // CLASSE FEITA
 
     }
 }
