@@ -46,11 +46,11 @@ namespace InstaDev.Models
                 }
             }
         }
-        public int GerarId()
+        public int GerarId(List<int> listaId)
         {
             int idGerado = randomNum.Next(1, 1000000);
 
-            if (ListaId.Contains(idGerado))
+            if (listaId.Contains(idGerado))
             {
                 do
                 {
