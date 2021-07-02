@@ -41,7 +41,7 @@ namespace InstaDev.Models
             ReescreverCSV(PATH, linhas);
         }
 
-        public List<Usuario> Listar(Usuario u)
+        public List<Usuario> Listar()
         {
             List<Usuario> usuarios = new List<Usuario>();
             string[] linhas = File.ReadAllLines(PATH);
@@ -62,5 +62,29 @@ namespace InstaDev.Models
 
             return usuarios;
         }
+        public List<int> RetornarId()
+        {
+            List<int> Ids = new List<int>();
+            foreach (var item in Listar())
+            {
+                Ids.Add(item.IdUsuario);
+            }
+
+            return Ids;
+        }
+        public void AtribuirEmail(string _email)
+        {
+            Email = _email;
+        }
+
+        public void AtribuirSenha(string _senha)
+        {
+            Senha = _senha;
+        }
+        public void AtribuirId(int _id)
+        {
+            IdUsuario = GerarId(RetornarId());
+        }
+        
     }
 }
