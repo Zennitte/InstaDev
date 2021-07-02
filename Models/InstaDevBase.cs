@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace InstaDevBase.Models
+namespace InstaDev.Models
 {
     public class InstaDevBase
     {
@@ -46,11 +46,11 @@ namespace InstaDevBase.Models
                 }
             }
         }
-        public int GerarId()
+        public int GerarId(List<int> listaId)
         {
             int idGerado = randomNum.Next(1, 1000000);
 
-            if (ListaId.Contains(idGerado))
+            if (listaId.Contains(idGerado))
             {
                 do
                 {
