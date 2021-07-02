@@ -2,11 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 .box{
-    background-color: #F1F1F1;
+    background-color: #fafafa;
     padding-top: 150px;
     padding-left: 789px;
     height: 1000px;
@@ -16,24 +15,18 @@
     height: 461px;
     width: 342px;
     display: flex;
-    
     flex-direction: column;
     align-items: center;
+    border: 1px solid #F1F1F1;
 }
 section{
     /* background-color: rgb(255, 0, 0); */
     height: 657px;
     width: 342px;
-    
-
-
-    
     /* margin-top: 150px; */
     display: flex;
-    
     flex-direction: column;
     align-items: center;
-    
 }
 .logo{
     height: 63px;
@@ -56,31 +49,23 @@ section{
     font-weight: 600;
     line-height: 19px;
     color: #909090;
-
 }
 
 .txt1_{
     font-family: 'Segoe UI';
     font-size: 14px;
-    font-style: normal;
     font-weight: 600;
     line-height: 19px;
     color: #909090;
-
-
 }
 
 .boxInput{
-
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
-    
 }
 
 input{
-
     height: 35px;
     width: 267px;
     margin-bottom: 10px;
@@ -88,26 +73,15 @@ input{
     border: 1px solid #DCDCDC;
     box-sizing: border-box;
     /* text-decoration: none; */
-    
     padding-left: 12px;
-
-
-    
 }
 
 input::placeholder{
     color: #AFAFAF;
     font-family: 'Segoe UI';
     font-size: 11px;
-    font-style: normal;
     font-weight: 400;
-
-
-
 }
-
-
-
 
 .cadastro{
     margin-top: 7px;
@@ -115,11 +89,9 @@ input::placeholder{
     background-color: #2686CC;
     font-family:'Segoe UI';
     font-size: 12px;
-    font-style: normal;
     font-weight: 600;
     line-height: 16px;
     color: #ffff;
-
     width: 267px;
     height: 30px;
     display: flex;
@@ -127,15 +99,11 @@ input::placeholder{
     align-items: center;
     border-radius: 2px;
     border:none;
-    
-
 }
 
 .txt2{
-    
     font-family: 'Segoe UI';
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
@@ -143,8 +111,6 @@ input::placeholder{
     color: #909090;
     margin-bottom: 48px;
     margin-top: 17px;
-    
-    
 }
 
 .boxtxt3{
@@ -152,15 +118,13 @@ input::placeholder{
 }
 
 .txt3{
-    
+    border: 1px solid #F1F1F1;
     width: 342px;
     background-color: white;
     font-family: 'Segoe UI';
     font-size: 12px;
-    font-style: normal;
     font-weight: 700;
     color: #353535;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,28 +135,18 @@ input::placeholder{
 .liNk{
     color: #2686CC;
     margin-left: 5px;
+    text-decoration: none;
 }
 
 .txt4{
     font-family: 'Segoe UI';
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     margin-top: 30px;
     margin-bottom: 30px;
-    
-
 }
 
 .app{
     height: 39px;
     width: 133px;
-
-
 }
-
-
-
-
-
-
