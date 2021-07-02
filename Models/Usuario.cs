@@ -81,7 +81,7 @@ namespace InstaDev.Models
         {
             Senha = _senha;
         }
-        public void AtribuirId(int _id)
+        public void AtribuirId()
         {
             IdUsuario = GerarId(RetornarId());
         }
