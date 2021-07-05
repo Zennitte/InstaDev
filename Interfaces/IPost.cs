@@ -11,6 +11,6 @@ namespace InstaDev.Interfaces
 
          void Alterar(Post post);
 
-         List<Post> Listar (Post post);
+         List<Post> Listar ();
     }
 }
