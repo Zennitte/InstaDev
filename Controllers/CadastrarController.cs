@@ -8,12 +8,14 @@ namespace InstaDev.Controllers
     public class CadastrarController : Controller
     {
         Usuario usuarioModel = new Usuario();
+
+        [Route("Index")]
         public IActionResult Index(){
+            ViewBag.Usuarios = usuarioModel.Listar();
             return View();
         }
 
         [Route("Cadastrar")] 
-
         public IActionResult Cadastrar(IFormCollection form){
 
             Usuario novoUsuario = new Usuario();
@@ -24,11 +26,9 @@ namespace InstaDev.Controllers
             novoUsuario.AtribuirId();
 
             usuarioModel.Cadastrar(novoUsuario);
+            ViewBag.Usuarios = usuarioModel.Listar();
 
-            return LocalRedirect("~/Usuario");
-            
-            
-
+            return LocalRedirect("~/Login/Index");
         }
 
     }
