@@ -1,3 +1,5 @@
+@model Post
+
 @{
     ViewData["Title"] = "Perfil"; 
 }
@@ -41,15 +43,17 @@
             <h2>publicações</h2>
         </div>
 
+
         <div class="posts">
 
             <div><img src="img/Rectangle 4.png" alt="thank you"></div>
 
-
-            <div class="post_data">
+        @foreach (Post post in ViewBag.Post)
+        {
+             <div class="post_data">
 
                 <div class="user_post">
-                    <div class="photo_post"><img src="" alt=""></div>
+                    <div class="photo_post">@post.Imagem</div>
                     <div class="user_data">
                         <h3>UserName</h3>
                         <span>Aldeia da folha,konoha</span>
@@ -78,7 +82,7 @@
                 </ul>
                 <span class="more_comments">Mais comentários</span>
             </div>
-
+        }
         </div>
     </section>
 </div>

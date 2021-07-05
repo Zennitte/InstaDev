@@ -13,6 +13,8 @@ namespace InstaDev.Models
         private int IdPost { get; set; }
         
         public string Titulo { get; set; }
+
+        public string UserName { get; set; }
         
         public string Texto { get; set; }
         
@@ -30,7 +32,7 @@ namespace InstaDev.Models
 
         private string Preparar(Post post){
 
-            return $"{post.IdUsuario};{post.IdPost};{post.Titulo};{post.Texto};{post.Imagem}";
+            return $"{post.IdUsuario};{post.IdPost};{post.Titulo};{post.Texto};{post.Imagem};{post.UserName}";
         }
 
         public void Criar(Post post)
@@ -71,6 +73,7 @@ namespace InstaDev.Models
                p.Titulo = linha[2];
                p.Texto = linha[3];
                p.Imagem = linha[4];
+               p.UserName = linha[5];
 
                posts.Add(p);
            }
