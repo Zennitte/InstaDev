@@ -14,7 +14,7 @@ namespace InstaDev.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return LocalRedirect("~/Login/Index");
         }
 
         public IActionResult Privacy()

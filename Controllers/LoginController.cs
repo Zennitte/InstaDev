@@ -28,7 +28,7 @@ namespace InstaDev.Controllers
             if (logado != null)
             {
                 HttpContext.Session.SetString("_username", logado.Split(";")[0]);
-                return LocalRedirect("~/Feed/Index");
+                return LocalRedirect("~/Perfil/Index");
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
