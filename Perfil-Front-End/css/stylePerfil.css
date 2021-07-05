@@ -1,0 +1,309 @@
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    border: 1px solid #F1F1F1;
+    height: 53px;
+    display: flex;
+}
+
+.container {
+    width: 938px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-lupa {
+    background-repeat: no-repeat;
+    width: 215px;
+    height: 28px;
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAFAFA;
+}
+
+.pesquisa {
+    border: none;
+    border: none;
+    width: 29%;
+    background: none;
+    padding-left: 5px;
+}
+
+.pesquisa ::placeholder {
+    font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: #AFAFAF;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_header {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_header img {
+    width: 100%;
+    height: 100%;
+}
+
+.home {
+    width: 19.5px;
+    height: 21.13px;
+}
+
+.plane {
+    width: 25px;
+    height: 25px;
+}
+
+.compass {
+    width: 24px;
+    height: 24px;
+}
+
+.heart {
+    width: 23.33px;
+    height: 20.42px;
+}
+
+.profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    background: black;
+}
+
+/* main */
+
+.container_main {
+    margin-top: 37px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_informations {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 155px;
+}
+
+.photo_profile {
+    width: 152px;
+    height: 154px;
+    border-radius: 115.5px;
+    background-color: black;
+}
+
+.inf_box {
+    height: 100%;
+    width: 51%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.inf_box h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    width: 264px;
+}
+
+.text_list {
+    display: flex;
+    width: 83%;
+    justify-content: space-between;
+}
+
+.text_list span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.extra_inf {
+    width: 83%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.extra_inf span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.extra_inf a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #2686CC;
+}
+
+.post_informations {
+    border-top: 1px solid #DCDCDC;
+    width: 100%;
+    margin-top: 37px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.publicacoes {
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 26%;
+}
+
+.publicacoes h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 7px;
+}
+
+.publicacoes img {
+    width: 16px;
+    height: 14px;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    height: 404px;
+    justify-content: space-between;
+}
+
+.photo_post {
+    width: 65px;
+    height: 66px;
+    border-radius: 115.5px;
+    background-color: black;
+}
+
+.post_data {
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+
+.user_post {
+    display: flex;
+    height: 17%;
+    width: 100%;
+}
+
+.user_data {
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    justify-content: space-evenly;
+}
+
+.user_data h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.user_data span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.inf_post {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 17%;
+}
+
+.inf_post span {
+    font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.heart_post {
+    width: 23.33px;
+    height: 20.42px;
+}
+
+.comment {
+    margin-left: 26px;
+    width: 23.33px;
+    height: 20.42px;
+}
+
+.comments ::marker {
+    font-size: 0px;
+    color: white;
+}
+
+.comments {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 35%
+}
+
+.comment_data {
+    width: 76%;
+}
+
+.user_comment {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.comment_data {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.more_comments {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: #909090;
+}
