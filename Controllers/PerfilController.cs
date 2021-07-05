@@ -15,12 +15,8 @@ namespace InstaDev.Controllers
 
         public IActionResult Index()
         {
-
             ViewBag.Perfil = post.Listar();
             return View();
         }
-
-
-        public IActionResult 
     }
 }

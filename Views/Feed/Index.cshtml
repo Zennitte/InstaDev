@@ -41,7 +41,9 @@
             </div>
 
             <div class="box_user">
-                <img class="user_img" src="css/Imagens/perfil.png" alt="Usuário">
+                <a asp-area="" asp-controller="Perfil" asp-action="Index">
+                    <img class="user_img" src="css/Imagens/perfil.png" alt="Usuário">
+                </a>
                 <div class="user">
                     <span class="username">Username</span>
                     <span class="name">Nome real</span>
@@ -57,15 +59,15 @@
                 </div>
 
                 <div class="form_post">
-                    <form class="box_form" action="" method="post">
+                    <form class="box_form" action='@Url.Action("Cadastrar")' method="POST">
                         <div class="descricao">
-                            <input class="descricao_post" type="text" name="Descricao"
+                            <input class="descricao_post" type="text" name="Texto"
                                 placeholder="Digite a descrição da imagem...">
                         </div>
 
                         <div class="imagem_post">
                             <label for="arquivo">Selecionar imagem</label>
-                            <input id="arquivo" class="imagem_post" type="file" name="arquivo">
+                            <input id="arquivo" class="imagem_post" type="file" name="Imagem">
                         </div>
 
                         <div>

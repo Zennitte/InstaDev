@@ -23,7 +23,6 @@ namespace InstaDev.Models
         Usuario user = new Usuario();
 
         public Post(){
-
             CriarPastaEArquivo(PATH);
         }
 
