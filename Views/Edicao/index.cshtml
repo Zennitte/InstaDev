@@ -1,0 +1,85 @@
+@{
+    ViewData["Title"] = "Ediçao Perfil";
+}
+
+<header>
+    <div class="Logo">
+
+        <img src="~/Img_Edicao/Instadev.png" alt="logo">
+
+    </div>
+
+    <div class="icones">
+        <nav class="nav_icones">
+            <img src="~/Img_Edicao/Vector (2).png" alt="">
+            <img src="~/Img_Edicao/plane 1.png" alt="">
+            <img src="~/Img_Edicao/Vector (1).png" alt="">
+            <img src="~/Img_Edicao/compass 1.png" alt="">
+            <img src="~/Img_Edicao/thank-you 1.png" alt="">
+        </nav>
+    </div>
+
+</header>
+
+<div class="bloco_edicao">
+
+
+    <div class="bloco_edicao_dois">
+
+        <h3 class="titulo">Editar Perfil</h3>
+
+        <img class="Foto" src="~/Img_Edicao/thank-you 2.png" alt="Perfil">
+
+        <div class="Perfil">
+
+            <p>yes_baby</p>
+            <a href="">Alterar foto de perfil</a>
+
+        </div>
+
+        <div class="conteudo_bloco_edicao">
+
+
+            <form class="form-group" action="" method="POST">
+                <label for="nome">
+                    <h4>Nome </h4>
+                </label>
+                <input name="nome" required type="text" class="form-control" id="exampleInputNome">
+
+                <p class="bloco_texto">Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido:
+                    seu
+                    nome completo, apelido ou nome comercial.</p>
+
+                <p class="bloco_texto">Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
+
+                <label for="username" class="titulo_nome_usuario">
+                    <h4>Nome_de_Usuário</h4>
+                </label>
+                <input required name="username" type="text" class="form-control" id="exampleInputNomeUsuario">
+
+                <p class="bloco_texto">Na maioria dos casos, você poderá alterar seu nome de usuário novamente para
+                    nascimento_tr por mais 14 dias.</p>
+
+                <p class="bloco_texto">Informações pessoais
+                    Forneça suas informações pessoais, mesmo se a conta for usada para uma empresa, um animal de
+                    estimação
+                    ou outra coisa. Elas não farão parte do seu perfil público.</p>
+
+                <label for="email">
+                    <h4>Email</h4>
+                </label>
+                <input required name="email" type="email" class="form-control" id="exampleInputEmail1">
+
+                <button class="enviar_botao" type="submit">Enviar</button>
+
+            </form>
+            
+            <div class="deletar_link">
+                <a href="">Desativar minha conta definitivamente</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
