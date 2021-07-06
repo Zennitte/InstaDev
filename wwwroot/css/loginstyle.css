@@ -5,6 +5,10 @@
     background-color: #fafafa;
 }
 
+.erro{
+    color: #fc1e8b;
+}
+
 .grid{
     width: 980px;
     margin: 0 auto;
