@@ -5,32 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - InstaDev</title>
     <script src="https://kit.fontawesome.com/84ef5dc63b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="~/css/styleFeed.css">
+    @switch (ViewData["Title"])
+    {
+        case "Cadastro":
+        <link rel="stylesheet" href="~/css/insta_cadastro.css">
+            break;
+        case "Login":
+        <link rel="stylesheet" href="~/css/loginstyle.css">
+            break;
+        case "Perfil":
+        <link rel="stylesheet" href="~/css/stylePerfil.css">
+            break;
+        case "Feed":
+        <link rel="stylesheet" href="~/css/styleFeed.css">
+            break;
+        @* case "Cadastro":
+        <link rel="stylesheet" href="~/css/insta_cadastro.css">
+            break; *@
+        default:
+            break;
+    }
+    
 </head>
 
 <body>
-    <header>
-        <div class="container container_header">
-            <div class="box_logo">
-                <img class="logo_instaDev" src="~/css/Imagens/logo_instaDev.png" alt="logo instaDev">
-            </div>
-
-            <div class="box_procurar">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <input type="search" name="Procurar" placeholder="Pesquisar">
-            </div>
-
-            <nav class="links_header">
-                <a class="link" href="#"><img src="~/css/Imagens/home.png" alt="Home"></a>
-                <a class="link" href="#"><img src="~/css/Imagens/send.png" alt="Mensagem"></a>
-                <a class="link" href="#"><img src="~/css/Imagens/compass.png" alt="Em alta"></a>
-                <a class="link" href="#"><img src="~/css/Imagens/likes.png" alt="Curtidas"></a>
-                <a class="link_perfil" asp-area="" asp-controller="Perfil" asp-action="Index"><img class="perfil_header" src="~/css/Imagens/perfil.png" alt="Imagem Perfil"></a>
-            </nav>
-
-        </div>
-    </header>
-
     <div>
         <main role="main" class="pb-3">
             @RenderBody()

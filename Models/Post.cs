@@ -11,6 +11,8 @@ namespace InstaDev.Models
         private int IdUsuario { get; set; }
         
         private int IdPost { get; set; } 
+
+        public string UserName { get; set; }
         
         public string Texto { get; set; }
         
@@ -27,7 +29,7 @@ namespace InstaDev.Models
 
         private string Preparar(Post post){
 
-            return $"{post.IdUsuario};{post.IdPost};{post.Texto};{post.Imagem}";
+            return $"{post.IdUsuario};{post.IdPost};{post.Texto};{post.Imagem};{post.UserName}";
         }
 
         public void Criar(Post post)
@@ -63,10 +65,11 @@ namespace InstaDev.Models
                string [] linha = item.Split(";");
 
                Post p = new Post();
-               p.IdPost = Int32.Parse(linha[0]);
-               p.IdUsuario = Int32.Parse(linha[1]);
+               p.IdUsuario = Int32.Parse(linha[0]);
+               p.IdPost = Int32.Parse(linha[1]);   
                p.Texto = linha[2];
                p.Imagem = linha[3];
+               p.UserName = linha[4];
 
                posts.Add(p);
            }
@@ -86,9 +89,13 @@ namespace InstaDev.Models
             return IdsPost;
         }
 
-        public void AtrubuirIdPost(int Id){
+        public void AtrubuirIdPost(){
 
             IdPost = GerarId(RetornarId());
+        }
+
+        public void ProcurarId(){
+            
         }
 
         // CLASSE 

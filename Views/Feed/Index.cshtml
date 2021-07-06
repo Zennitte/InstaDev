@@ -2,6 +2,29 @@
     ViewData["Title"] = "Feed";
 }
 
+<header>
+    <div class="container container_header">
+        <div class="box_logo">
+            <img class="logo_instaDev" src="~/css/Imagens/logo_instaDev.png" alt="logo instaDev">
+        </div>
+
+        <div class="box_procurar">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <input type="search" name="Procurar" placeholder="Pesquisar">
+        </div>
+
+        <nav class="links_header">
+            <a class="link" href="#"><img src="~/css/Imagens/home.png" alt="Home"></a>
+            <a class="link" href="#"><img src="~/css/Imagens/send.png" alt="Mensagem"></a>
+            <a class="link" href="#"><img src="~/css/Imagens/compass.png" alt="Em alta"></a>
+            <a class="link" href="#"><img src="~/css/Imagens/likes.png" alt="Curtidas"></a>
+            <a class="link_perfil" asp-area="" asp-controller="Perfil" asp-action="Index"><img class="perfil_header"
+                    src="~/css/Imagens/perfil.png" alt="Imagem Perfil"></a>
+        </nav>
+
+    </div>
+</header>
+
 <section class="container_story_user">
     <div class="box_story">
         <div class="box_story_user">
@@ -44,10 +67,12 @@
         <a asp-area="" asp-controller="Perfil" asp-action="Index">
             <img class="user_img" src="~/css/Imagens/perfil.png" alt="Usuário">
         </a>
+
         <div class="user">
-            <span class="username">Username</span>
+            <span class="username">@ViewBag</span>
             <span class="name">Nome real</span>
         </div>
+
     </div>
 </section>
 
@@ -86,14 +111,10 @@
                 <img class="perfil_infinite_roll" src="~/css/Imagens/perfil.png" alt="Usuário">
 
                 <div class="user_about">
-                    @if (ViewBag.UserName != null)
+                    @if (ViewBag.Usuarios == null)
                     {
-                      <span class="username_post">S @ViewBag.UserName</span>
-                      <span class="regiao_post">Canadá</span>
-                    }
-                    else
-                    {
-                        <span>NÃO TEM NADA</span>
+                        <span class="username_post">@post.UserName</span>
+                        <span class="regiao_post">Canadá</span>
                     }
                 </div>
             </div>
@@ -109,7 +130,7 @@
             <span class="curtidas">8532 curtidas</span>
 
             <div class="comment_post">
-                <span class="comment_user">User Post</span>
+                <span class="comment_user">@post.UserName</span>
                 <span class="comment_user_post">@post.Texto</span>
             </div>
 

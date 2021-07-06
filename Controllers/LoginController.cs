@@ -23,7 +23,7 @@ namespace InstaDev.Controllers
         {
             List<string> UsuariosCSV = usuarioModel.LerTodasLinhasCSV("Database/usuario.csv");
 
-            var logado = UsuariosCSV.Find(x => x.Split(";")[2] == form["email"] && x.Split(";")[3] == form["senha"]);
+            var logado = UsuariosCSV.Find(x => x.Split(";")[2] == form["Email"] && x.Split(";")[3] == form["Senha"]);
 
             if (logado != null)
             {

@@ -20,7 +20,7 @@ namespace InstaDev.Controllers
 
             Usuario novoUsuario = new Usuario();
             novoUsuario.Nome= form["nome"];
-            novoUsuario.Nick=form["nick"];
+            novoUsuario.UserName=form["nick"];
             novoUsuario.AtribuirEmail(form["email"]);
             novoUsuario.AtribuirSenha(form["senha"]);
             novoUsuario.AtribuirId();

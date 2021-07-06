@@ -10,6 +10,8 @@ namespace InstaDev.Controllers
     {
         Post postModel = new Post();
 
+        Usuario usuarioModel = new Usuario();
+
         [Route("Listar")]
         public IActionResult Index()
         {
@@ -63,6 +65,13 @@ namespace InstaDev.Controllers
             Post novoPost = new Post();
 
             novoPost.Texto = form["Texto"];
+
+            novoPost.UserName = HttpContext.Session.GetString("_UserName");
+
+            ViewBag.UserName = HttpContext.Session.GetString("_UserName");
+            // novoPost.UserName = ViewBag.Usuarios.Find;
+
+            novoPost.AtrubuirIdPost();
 
             // novoPost.Imagem = form["Imagem"];
 
