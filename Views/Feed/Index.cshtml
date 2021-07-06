@@ -3,105 +3,113 @@
 }
 
 <section class="container_story_user">
-            <div class="box_story">
-                <div class="box_story_user">
-                    <img class="story_img" src="css/Imagens/perfil.png" alt="Usuário">
-                    <span>Usuário</span>
+    <div class="box_story">
+        <div class="box_story_user">
+            <img class="story_img" src="~/css/Imagens/perfil.png" alt="Usuário">
+            <span>Usuário</span>
+        </div>
+
+        <div class="box_story_user">
+            <img class="story_img" src="~/css/Imagens/perfil.png" alt="Usuário">
+            <span>Usuário</span>
+        </div>
+
+        <div class="box_story_user">
+            <img class="story_img" src="~/css/Imagens/perfil.png" alt="Usuário">
+            <span>Usuário</span>
+        </div>
+
+        <div class="box_story_user">
+            <img class="story_img" src="~/css/Imagens/perfil.png" alt="Usuário">
+            <span>Usuário</span>
+        </div>
+
+        <div class="box_story_user">
+            <img class="story_img" src="~/css/Imagens/perfil.png" alt="Usuário">
+            <span>Usuário</span>
+        </div>
+
+        <div class="box_story_user">
+            <img class="story_img" src="~/css/Imagens/perfil.png" alt="Usuário">
+            <span>Usuário</span>
+        </div>
+
+        <div class="box_story_user">
+            <img class="story_img" src="~/css/Imagens/perfil.png" alt="Usuário">
+            <span>Usuário</span>
+        </div>
+    </div>
+
+    <div class="box_user">
+        <a asp-area="" asp-controller="Perfil" asp-action="Index">
+            <img class="user_img" src="~/css/Imagens/perfil.png" alt="Usuário">
+        </a>
+        <div class="user">
+            <span class="username">Username</span>
+            <span class="name">Nome real</span>
+        </div>
+    </div>
+</section>
+
+<section class="container_post">
+    <div class="box_post">
+        <div class="send_post">
+            <img class="post_perfil" src="~/css/Imagens/perfil.png" alt="Usuário">
+            <span class="send_post_span">Postar</span>
+        </div>
+
+        <div class="form_post">
+            <form enctype="multipart/form-data" class="box_form" action='@Url.Action("Cadastrar")' method="POST">
+                <div class="descricao">
+                    <input class="descricao_post" type="text" name="Texto"
+                        placeholder="Digite a descrição da imagem...">
                 </div>
 
-                <div class="box_story_user">
-                    <img class="story_img" src="css/Imagens/perfil.png" alt="Usuário">
-                    <span>Usuário</span>
+                <div class="imagem_post">
+                    <label for="arquivo">Selecionar imagem</label>
+                    <input id="arquivo" class="imagem_post" type="file" name="Imagem">
                 </div>
 
-                <div class="box_story_user">
-                    <img class="story_img" src="css/Imagens/perfil.png" alt="Usuário">
-                    <span>Usuário</span>
+                <div>
+                    <input class="submit_post" type="submit" placeholder="Enviar">
                 </div>
+            </form>
+        </div>
+    </div>
+</section>
 
-                <div class="box_story_user">
-                    <img class="story_img" src="css/Imagens/perfil.png" alt="Usuário">
-                    <span>Usuário</span>
-                </div>
+<section class="container_infinite_roll">
+    <div class="box_infinite_roll">
+        @foreach (var post in ViewBag.Posts)
+        {
+            <div class="box_user_about">
+                <img class="perfil_infinite_roll" src="~/css/Imagens/perfil.png" alt="Usuário">
 
-                <div class="box_story_user">
-                    <img class="story_img" src="css/Imagens/perfil.png" alt="Usuário">
-                    <span>Usuário</span>
-                </div>
-
-                <div class="box_story_user">
-                    <img class="story_img" src="css/Imagens/perfil.png" alt="Usuário">
-                    <span>Usuário</span>
-                </div>
-
-                <div class="box_story_user">
-                    <img class="story_img" src="css/Imagens/perfil.png" alt="Usuário">
-                    <span>Usuário</span>
-                </div>
-            </div>
-
-            <div class="box_user">
-                <a asp-area="" asp-controller="Perfil" asp-action="Index">
-                    <img class="user_img" src="css/Imagens/perfil.png" alt="Usuário">
-                </a>
-                <div class="user">
-                    <span class="username">Username</span>
-                    <span class="name">Nome real</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="container_post">
-            <div class="box_post">
-                <div class="send_post">
-                    <img class="post_perfil" src="css/Imagens/perfil.png" alt="Usuário">
-                    <span class="send_post_span">Postar</span>
-                </div>
-
-                <div class="form_post">
-                    <form class="box_form" action='@Url.Action("Cadastrar")' method="POST">
-                        <div class="descricao">
-                            <input class="descricao_post" type="text" name="Texto"
-                                placeholder="Digite a descrição da imagem...">
-                        </div>
-
-                        <div class="imagem_post">
-                            <label for="arquivo">Selecionar imagem</label>
-                            <input id="arquivo" class="imagem_post" type="file" name="Imagem">
-                        </div>
-
-                        <div>
-                            <input class="submit_post" type="submit" name="Postar" placeholder="Enviar">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section class="container_infinite_roll">
-            <div class="box_infinite_roll">
-                <div class="box_user_about">
-                    <img class="perfil_infinite_roll" src="css/Imagens/perfil.png" alt="Usuário">
-
-                    <div class="user_about">
-                        <span class="username_post">Username</span>
-                        <span class="regiao_post">Canadá</span>
-                    </div>
-                </div>
-
-                <img class="img_post_infinite_roll" src="css/Imagens/img_post.jpg" alt="Post">
-
-                <div class="about_post">
-                    <a href="#"><img src="css/Imagens/likes.png" alt="Curtidas"></a>
-                    <a href="#"><img src="css/Imagens/comment.png" alt="Comentário"></a>
-
-                    <input class="comment_input" type="text" name="Comentario" placeholder="Comentar...">
-                </div>
-                <span class="curtidas">8532 curtidas</span>
-
-                <div class="comment_post">
-                    <span class="comment_user">name</span>
-                    <span class="comment_user_post">Comentário</span>
+                <div class="user_about">
+                    <span class="username_post"></span>
+                    <span class="regiao_post">Canadá</span>
                 </div>
             </div>
-        </section>
+
+            <img class="img_post_infinite_roll" src="~/img/Feed/@post.Imagem" alt="Post">
+
+            <div class="about_post">
+                <a href="#"><img src="~/css/Imagens/likes.png" alt="Curtidas"></a>
+                <a href="#"><img src="~/css/Imagens/comment.png" alt="Comentário"></a>
+
+                <input class="comment_input" type="text" name="Comentario" placeholder="Comentar...">
+            </div>
+            <span class="curtidas">8532 curtidas</span>
+
+            <div class="comment_post">
+                <span class="comment_user">User Post</span>
+                <span class="comment_user_post">@post.Texto</span>
+            </div>
+
+            <div class="comment_post">
+                <span class="comment_user">name</span>
+                <span class="comment_user_post">Comentário</span>
+            </div>
+        }
+    </div>
+</section>

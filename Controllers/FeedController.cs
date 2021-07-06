@@ -69,14 +69,14 @@ namespace InstaDev.Controllers
             if (form.Files.Count > 0)
             {
                 var file = form.Files[0];
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "~/img/Perfil");
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Feed");
 
                 if (!Directory.Exists(folder))
                 {
                     Directory.CreateDirectory(folder);
                 }
 
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "~/img/", folder, file.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
 
 
                 using (var stream = new FileStream(path, FileMode.Create))
@@ -93,10 +93,10 @@ namespace InstaDev.Controllers
             }
 
             postModel.Criar(novoPost);
-            ViewBag.Equipes = postModel.Listar();
+            ViewBag.Posts = postModel.Listar();
 
 
-            return LocalRedirect("~/Perfil/Listar");
+            return LocalRedirect("~/Feed/Listar");
 
         }
     }
