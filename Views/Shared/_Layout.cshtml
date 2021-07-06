@@ -1,9 +1,14 @@
 ﻿<!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+<html lang="pt-br">
+>>>>>>> 40868e514575ab7d5f4385bcd10fce4339b1f7d9
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - InstaDev</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -30,16 +35,36 @@
         </nav>
     </header>
     <div class="container">
+=======
+    @switch (ViewData["Title"])
+    {
+        case "Cadastro":
+        <link rel="stylesheet" href="~/css/insta_cadastro.css">
+            break;
+        case "Login":
+        <link rel="stylesheet" href="~/css/loginstyle.css">
+            break;
+        default:
+            break;
+    }
+    
+</head>
+<body>
+    <div>
+>>>>>>> 40868e514575ab7d5f4385bcd10fce4339b1f7d9
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+<<<<<<< HEAD
 
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - InstaDev - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+=======
+>>>>>>> 40868e514575ab7d5f4385bcd10fce4339b1f7d9
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
