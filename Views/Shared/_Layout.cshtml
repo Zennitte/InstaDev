@@ -1,47 +1,46 @@
 ﻿<!DOCTYPE html>
-<<<<<<< HEAD
-<html lang="en">
-=======
 <html lang="pt-br">
->>>>>>> 9f4528782e7480e6aa972a61ebd8eb3249b45443
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - InstaDev</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/stylePerfil.css" />
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">InstaDev</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="container">
+            <div class="logo"><img src="/imagePerfil/Instadev.png"></div>
+            <div class="img-lupa">
+                <img src="/imagePerfil/lupa.png" alt="lupa">
+                <label for=""></label>
+                <input placeholder="Pesquisar" class="pesquisa" type="file">
             </div>
-        </nav>
+
+            <!-- Precisa colocar um form aqui -->
+
+            <nav class="nav_header">
+                <a class="home" href=""><img src="/imagePerfil/Home.png" alt="link casa"></a>
+                <a class="plane" href=""><img src="/imagePerfil/plane 1.png" alt="Link avião"></a>
+                <a class="compass" href=""><img src="/imagePerfil/compass 1.png" alt="Link bússola"></a>
+                <a class="heart" href=""><img src="/imagePerfil/VectorCoração.png" alt="Link coração"></a>
+                <a class="profile" href=""></a>
+            </nav>
+        </div>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - InstaDev - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer>
+        <div class="container container_footer">
+            <img src="/imagePerfil/Instadev.png" alt="logo Instadev">
+            <small>© 2021 Instadev</small>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -49,4 +48,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
