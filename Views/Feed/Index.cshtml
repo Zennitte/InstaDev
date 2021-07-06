@@ -86,8 +86,15 @@
                 <img class="perfil_infinite_roll" src="~/css/Imagens/perfil.png" alt="Usuário">
 
                 <div class="user_about">
-                    <span class="username_post"></span>
-                    <span class="regiao_post">Canadá</span>
+                    @if (ViewBag.UserName != null)
+                    {
+                      <span class="username_post">S @ViewBag.UserName</span>
+                      <span class="regiao_post">Canadá</span>
+                    }
+                    else
+                    {
+                        <span>NÃO TEM NADA</span>
+                    }
                 </div>
             </div>
 

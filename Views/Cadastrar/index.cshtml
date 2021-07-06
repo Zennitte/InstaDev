@@ -10,7 +10,7 @@
                     <span class="txt1">Cadastre-se para ver fotos e </span><span class="txt1_">vídeos dos seus
                         amigos.</span>
                 </div>
-                <form method="POST" action='@Url.Action("Cadastrar")'>
+                <form enctype="multipart/form-data" method="POST" action='@Url.Action("Cadastrar")'>
                     <div class="boxInput">
                         <label for="email"></label>
                         <input required name="email" placeholder="Email" type="email">

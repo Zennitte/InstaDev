@@ -7,7 +7,7 @@
         <div class="container_logo">
             <img class="logo" src="~/Img/Instadev.svg" alt="Logo">
         </div>
-        <form class="container_form" action= '@Url.Action("Logar")' method="POST">
+        <form enctype="multipart/form-data" class="container_form" action= '@Url.Action("Logar")' method="POST">
 
             <label for="Email"></label>
             <input class="campo" placeholder="Email" type="email" name="Email" required>

@@ -8,7 +8,7 @@ namespace InstaDev.Models
     public class Usuario : InstaDevBase, IUsuario
     {
         public string Nome { get; set; }
-        public string UserName { get; set; }
+        public string Nick { get; set; }
         private string Email { get; set; }
         private string Senha { get; set; }
         private int IdUsuario { get; set; }
@@ -19,7 +19,7 @@ namespace InstaDev.Models
         }
         private string Preparar(Usuario u)
         {
-            return $"{u.Nome};{u.UserName};{u.Email};{u.Senha};{u.IdUsuario}";
+            return $"{u.Nome};{u.Nick};{u.Email};{u.Senha};{u.IdUsuario}";
         }
         public void Alterar(Usuario u)
         {
@@ -52,7 +52,7 @@ namespace InstaDev.Models
                 Usuario usuario = new Usuario();
 
                 usuario.Nome = linha[0];
-                usuario.UserName = linha[1];
+                usuario.Nick = linha[1];
                 usuario.Email = linha[2];
                 usuario.Senha = linha[3];
                 usuario.IdUsuario = Int32.Parse(linha[4]);

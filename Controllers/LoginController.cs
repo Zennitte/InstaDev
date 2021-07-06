@@ -27,8 +27,8 @@ namespace InstaDev.Controllers
 
             if (logado != null)
             {
-                HttpContext.Session.SetString("_username", logado.Split(";")[0]);
-                return LocalRedirect("~/Perfil/Index");
+                HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
+                return LocalRedirect("~/Feed/Listar");
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
@@ -36,7 +36,7 @@ namespace InstaDev.Controllers
         }
         public IActionResult Logout()
         {
-            HttpContext.Session.Remove("_username");
+            HttpContext.Session.Remove("_UserName");
             return LocalRedirect("~/Login/Index");
         }
     }
