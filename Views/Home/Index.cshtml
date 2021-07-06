@@ -3,85 +3,8 @@
     ViewData["Title"] = "Perfil"; 
 }
 
-
-<div class="container container_main">
-    <section class="profile_informations">
-
-        <div class="photo_profile">
-            <img src="" alt="">
-        </div>
-
-        <div class="inf_box">
-            <h1>Nada</h1>
-            <div class="text_list">
-                <div>
-                    <span>12</span>
-                    <span>publicações</span>
-                </div>
-                <div>
-                    <span>123</span>
-                    <span>seguindo</span>
-                </div>
-                <div>
-                    <span>235</span>
-                    <span>seguidores</span>
-                </div>
-            </div>
-            <div class="extra_inf">
-                <span>Exemplo</span>
-                <a href="">Editar Perfil</a>
-                <a href="">Sair</a>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="post_informations">
-        <div class="publicacoes">
-            <img src="/imagePerfil/image 1.png" alt="">
-            <h2>publicações</h2>
-        </div>
-
-
-        <div class="posts">
-
-            <div><img src="/imagePerfil/Rectangle 4.png" alt="thank you"></div>
-
-        @* @foreach (Post post in ViewBag.Post)
-        { *@
-             <div class="post_data">
-
-                <div class="user_post">
-                    <div class="photo_post"><img src="" alt=""></div>
-                    <div class="user_data">
-                        <h3>UserName</h3>
-                        <span>Aldeia da folha,konoha</span>
-                    </div>
-                </div>
-
-                <div class="inf_post">
-                    <img class="heart_post" src="/imagePerfil/VectorCoração.png" alt="">
-                    <img class="comment" src="/imagePerfil/VectorComentario.png" alt="">
-                    <span>Muitas curtidas kkkk</span>
-                </div>
-
-                <ul class="comments">
-                    <li class="user_comment">Aleatório</li>
-                    <li class="comment_data">Fera!</li>
-                    <li><img src="/imagePerfil/Vector.png" alt=""></li>
-                    <li class="user_comment">Aleatório</li>
-                    <li class="comment_data">Fera!</li>
-                    <li><img src="/imagePerfil/Vector.png" alt=""></li>
-                    <li class="user_comment">Aleatório</li>
-                    <li class="comment_data">Fera!</li>
-                    <li><img src="/imagePerfil/Vector.png" alt=""></li>
-                    <li class="user_comment">Aleatório</li>
-                    <li class="comment_data">Fera!</li>
-                    <li><img src="/imagePerfil/Vector.png" alt=""></li>
-                </ul>
-                <span class="more_comments">Mais comentários</span>
-            </div>
-        @* } *@
-        </div>
-    </section>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <a asp-area="" asp-controller="Feed" asp-action="Index">Hello</a>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

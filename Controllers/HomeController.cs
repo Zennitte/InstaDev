@@ -5,7 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-// using InstaDev.Models;
+using InstaDev.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace InstaDev.Controllers
 {
@@ -20,7 +21,8 @@ namespace InstaDev.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            ViewBag.UserName = HttpContext.Session.GetString("_UserName");
+            return LocalRedirect("~/Login/Index");
         }
 
         public IActionResult Privacy()

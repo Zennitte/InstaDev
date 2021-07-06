@@ -5,37 +5,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - InstaDev</title>
-    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
-    <link rel="stylesheet" href="~/css/stylePerfil.css" />
+    <script src="https://kit.fontawesome.com/84ef5dc63b.js" crossorigin="anonymous"></script>
+    @switch (ViewData["Title"])
+    {
+        case "Cadastro":
+        <link rel="stylesheet" href="~/css/insta_cadastro.css">
+            break;
+        case "Login":
+        <link rel="stylesheet" href="~/css/loginstyle.css">
+            break;
+        case "Perfil":
+        <link rel="stylesheet" href="~/css/stylePerfil.css">
+            break;
+        case "Feed":
+        <link rel="stylesheet" href="~/css/styleFeed.css">
+            break;
+        @* case "Cadastro":
+        <link rel="stylesheet" href="~/css/insta_cadastro.css">
+            break; *@
+        default:
+            break;
+    }
+    
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="logo"><img src="/imagePerfil/Instadev.png"></div>
-            <div class="img-lupa">
-                <img src="/imagePerfil/lupa.png" alt="lupa">
-                <label for=""></label>
-                <input placeholder="Pesquisar" class="pesquisa" type="file">
-            </div>
-
-            <!-- Precisa colocar um form aqui -->
-
-            <nav class="nav_header">
-                <a class="home" href=""><img src="/imagePerfil/Home.png" alt="link casa"></a>
-                <a class="plane" href=""><img src="/imagePerfil/plane 1.png" alt="Link avião"></a>
-                <a class="compass" href=""><img src="/imagePerfil/compass 1.png" alt="Link bússola"></a>
-                <a class="heart" href=""><img src="/imagePerfil/VectorCoração.png" alt="Link coração"></a>
-                <a class="profile" href=""></a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container">
+    <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+<<<<<<< HEAD
 
     <footer>
         <div class="container container_footer">
@@ -43,6 +43,8 @@
             <small>© 2021 Instadev</small>
         </div>
     </footer>
+=======
+>>>>>>> 9d4880e84ba77f274cdb7ef000e22271d5d3071b
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
