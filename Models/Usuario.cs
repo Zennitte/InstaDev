@@ -34,10 +34,10 @@ namespace InstaDev.Models
             string[] linha = { Preparar(u) };
             File.AppendAllLines(PATH, linha);
         }
-        public void Deletar(Usuario u)
+        public void Deletar(int id)
         {
             List<string> linhas = LerTodasLinhasCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[4] == u.IdUsuario.ToString());
+            linhas.RemoveAll(x => x.Split(";")[4] == IdUsuario.ToString());
             ReescreverCSV(PATH, linhas);
         }
 
@@ -86,6 +86,9 @@ namespace InstaDev.Models
             IdUsuario = GerarId(RetornarId());
         }
 
-        
+        public void AtribuirId(int _id)
+        {
+            IdUsuario = _id;
+        }     
     }
 }

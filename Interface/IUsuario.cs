@@ -8,6 +8,6 @@ namespace InstaDev.Interface
         void Cadastrar(Usuario u);
         void Alterar(Usuario u);
         List<Usuario> Listar();
-        void Deletar(Usuario u);
+        void Deletar(int id);
     }
 }
