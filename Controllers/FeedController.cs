@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using InstaDev.Models;
+using System;
 
 namespace InstaDev.Controllers
 {
@@ -21,43 +22,6 @@ namespace InstaDev.Controllers
             return View();
         }
 
-        // [Route("Cadastrar")]
-        // public IActionResult Cadastrar(IFormCollection form)
-        // {
-        //     Post novoPost = new Post();
-        //     novoPost.Texto = form["Texto"];
-
-        //     //Upload Inicio
-
-        //     if (form.Files.Count > 0)
-        //     {
-        //         var file = form.Files[0];
-        //         var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Post");
-
-        //         if (!Directory.Exists(folder))
-        //         {
-        //             Directory.CreateDirectory(folder);
-        //         }
-
-        //         var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
-
-        //         using (var stream = new FileStream(path, FileMode.Create))
-        //         {
-        //             file.CopyTo(stream);
-        //         }
-
-        //         novoPost.Imagem = file.FileName;
-        //     }
-
-        //     //Upload Final
-
-        //     postModel.Criar(novoPost);
-
-        //     ViewBag.Posts = postModel.Listar();
-
-        //     return LocalRedirect("~/Post/Listar");
-        // }
-
 
         [Route("Cadastrar")]
 
@@ -67,6 +31,8 @@ namespace InstaDev.Controllers
             Post novoPost = new Post();
 
             novoPost.Texto = form["Texto"];
+
+            novoPost.IdUsuario = Int32.Parse(HttpContext.Session.GetString("_IdUsuario"));
 
             novoPost.UserName = HttpContext.Session.GetString("_UserName");
 

@@ -29,7 +29,7 @@
         </div>
 
         <div class="inf_box">
-            <h1>@ViewBag.Usuario.UserName</h1>
+            <h1>@ViewBag.UserName</h1>
             <div class="text_list">
                 <div>
                     <span>12</span>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="extra_inf">
-                <span>Exemplo</span>
+                <span>@ViewBag.Nome</span>
                 <a href="">Editar Perfil</a>
                 <a href="">Sair</a>
             </div>
@@ -60,18 +60,20 @@
         </div>
 
 
-        <div class="posts">
 
-            <div><img src="~/imgPerfil/Rectangle 4.png" alt="thank you"></div>
+         
 
-        @foreach (Post post in ViewBag.Post)
+
+        @foreach (var post in ViewBag.Perfil)
         {
+        <div class="posts">
+            <div class="imagem_feed"><img style="width: 100%; height: 100%;" src="~/img/Feed/@post.Imagem" alt="Post"></div>
              <div class="post_data">
 
                 <div class="user_post">
-                    <div class="photo_post">@post.Imagem</div>
+                    <div class="photo_post"></div>
                     <div class="user_data">
-                        <h3>UserName</h3>
+                        <h3>@post.UserName</h3>
                         <span>Aldeia da folha,konoha</span>
                     </div>
                 </div>
@@ -97,6 +99,7 @@
                     <li><img src="img/Vector.png" alt=""></li>
                 </ul>
                 <span class="more_comments">Mais comentários</span>
+            </div>
             </div>
         }
         </div>

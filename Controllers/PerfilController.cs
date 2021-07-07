@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.IO;
 using InstaDev.Models;
 using Microsoft.AspNetCore.Http;
@@ -9,12 +11,17 @@ namespace InstaDev.Controllers
     public class PerfilController : Controller
     {
         Post postModel = new Post();
+    
 
         [Route("Listar")]
 
         public IActionResult Index()
         {
-            ViewBag.Perfil = postModel.Listar();
+            ViewBag.UserName = HttpContext.Session.GetString("_UserName");
+            ViewBag.Nome = HttpContext.Session.GetString("_Nome");
+            ViewBag.Perfil = postModel.ListarPosts(Int32.Parse(HttpContext.Session.GetString("_IdUsuario")));
+           
+
             return View();
         }
     }

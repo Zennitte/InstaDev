@@ -181,6 +181,11 @@ header {
     padding-left: 26%;
 }
 
+.imagem_feed {
+    width: 430px;
+    height: 404px;
+}
+
 .publicacoes h2 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -200,6 +205,7 @@ header {
     flex-wrap: wrap;
     height: 404px;
     justify-content: space-between;
+    margin-bottom: 55px;
 }
 
 .photo_post {

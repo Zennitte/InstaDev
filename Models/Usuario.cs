@@ -11,7 +11,7 @@ namespace InstaDev.Models
         public string UserName { get; set; }
         private string Email { get; set; }
         private string Senha { get; set; }
-        private int IdUsuario { get; set; }
+        public int IdUsuario { get; set; }
         private const string PATH = "Database/usuario.csv";
         public Usuario()
         {
