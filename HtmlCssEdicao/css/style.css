@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color:  #FAFAFA;
+}
+header
+{
+    width: 1920px;
+    height: 53px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    
+}
+.Logo
+{
+    display:flex;
+    width: 100px;
+    height: 50px;
+    
+    align-items: center;
+    margin-left: 200px;
+    /*background-color: chocolate;*/
+}
+.Logo img 
+{
+    height: 25px;
+}
+.icones
+{
+    display: flex;
+    width: 400px;
+    height: 100px;
+    /*background-color: brown;*/
+    
+    margin-left: 880px;
+    margin-top: -40px;
+    justify-content: space-between;
+}
+.nav_icones img
+{
+    margin-left: 20px;
+}
+
+.bloco_edicao
+{
+    
+    width: 935px;
+    margin-top: 20px;
+    height: 580px;
+    margin-left: 200px;
+    left: 492px;
+    top: 77px;
+    
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    box-sizing: border-box;
+}
+
+.bloco_edicao_dois
+{
+    width: 220px;
+    height: 580px;
+    left: 492px;
+    top: 77px;
+
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    box-sizing: border-box;
+}
+
+.titulo
+{
+    margin-top: 50px;
+    /*background-color: aquamarine;*/
+    width: 200px;
+    height: 16px;
+    left: 521px;
+    top: 96px;
+    margin-left: 15px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+}
+.Foto
+{
+    margin-left: 350px;
+    margin-top: -120px;
+
+}
+
+.Perfil
+{
+    margin-left: 420px;
+    margin-top: -50px;
+    margin-bottom: -20px;
+
+    width: 150px;
+    height: 50px;
+
+}
+.Perfil p 
+{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.Perfil a 
+{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    /*color: #2686CC;*/
+    text-decoration: none;
+    color: #2686CC;
+}
+
+
+.conteudo_bloco_edicao h4
+{
+ 
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 350px;
+    margin-top: 40px;
+    
+    
+}
+
+
+label
+{
+    display: flex;
+    width: 200px;
+    height: 20px;
+    left: 50px;
+    top: 175px;
+    margin-right: -250px;
+    /*background-color: blueviolet;*/
+    flex-direction: row;
+    
+
+  
+}
+.titulo_nome_usuario
+{
+    width: 100px;
+    margin-left: -70px;
+    
+}
+
+.form-control
+{
+    
+    width: 354px;
+    height: 30px;
+    left: 925px;
+    top: 169px;
+    
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 420px;
+}
+.bloco_texto
+{
+   
+    width: 354px;
+    height: 48px;
+    left: 925px;
+    top: 211px;
+    margin-left: 420px;
+    
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #909090;
+}
+
+.enviar_botao
+{
+    width: 66px;
+    height: 30px;
+    left: 925px;
+    top: 584px;
+    
+    background: #2686CC;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 420px;
+    margin-top: 30px;
+    
+}
+.enviar_botao a
+{
+    font-style:normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none
+}
+
+.deletar_link
+{
+
+    width: 400px;
+    height: 50px;
+    align-items:flex-start;
+    justify-content: center;
+    margin-left: 520px;
+    margin-top: -23px;
+
+}
+
+.deletar_link a 
+{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #2686CC;
+    text-decoration: none
+}
+
