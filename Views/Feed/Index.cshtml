@@ -14,7 +14,7 @@
         </div>
 
         <nav class="links_header">
-            <a class="link" href="#"><img src="~/css/Imagens/home.png" alt="Home"></a>
+            <a class="link" asp-area="" asp-controller="Feed" asp-action="Listar"><img src="~/css/Imagens/home.png" alt="Home"></a>
             <a class="link" href="#"><img src="~/css/Imagens/send.png" alt="Mensagem"></a>
             <a class="link" href="#"><img src="~/css/Imagens/compass.png" alt="Em alta"></a>
             <a class="link" href="#"><img src="~/css/Imagens/likes.png" alt="Curtidas"></a>
@@ -69,10 +69,11 @@
         </a>
 
         <div class="user">
-            <span class="username">@ViewBag.UserName</span>
-            <span class="name">@ViewBag.Nome</span>
+            <a asp-area="" asp-controller="Perfil" asp-action="Index">
+                <span class="username">@ViewBag.UserName</span>
+                <span class="name">@ViewBag.Nome</span>
+            </a>
         </div>
-
     </div>
 </section>
 
@@ -103,10 +104,11 @@
     </div>
 </section>
 
-<section class="container_infinite_roll">
-    <div class="box_infinite_roll">
-        @foreach (var post in ViewBag.Posts)
-        {
+@foreach (var post in ViewBag.Posts)
+{
+    <section class="container_infinite_roll">
+        <div class="box_infinite_roll">
+
             <div class="box_user_about">
                 <img class="perfil_infinite_roll" src="~/css/Imagens/perfil.png" alt="Usuário">
 
@@ -138,6 +140,7 @@
                 <span class="comment_user">name</span>
                 <span class="comment_user_post">Comentário</span>
             </div>
-        }
-    </div>
-</section>
+
+        </div>
+    </section>
+}
