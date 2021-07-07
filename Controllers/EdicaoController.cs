@@ -38,12 +38,11 @@ namespace InstaDev.Controllers
             return LocalRedirect("~/Editar/Index");
         }
 
-        [Route("Deletar")]
+        [Route("Deletar/{id}")]
         public IActionResult Deletar(int id)
         {
-            int usuarioDeletado = Int32.Parse(HttpContext.Session.GetString("_IdUsuario"));
-            
-            usuarioModel.Deletar(usuarioDeletado);
+            usuarioModel.Deletar(id);
+
             ViewBag.Usuarios = usuarioModel.Listar();
 
             return LocalRedirect("~/Login/Index");

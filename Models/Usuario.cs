@@ -37,7 +37,7 @@ namespace InstaDev.Models
         public void Deletar(int id)
         {
             List<string> linhas = LerTodasLinhasCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[4] == IdUsuario.ToString());
+            linhas.RemoveAll(x => x.Split(";")[4] == id.ToString());
             ReescreverCSV(PATH, linhas);
         }
 
