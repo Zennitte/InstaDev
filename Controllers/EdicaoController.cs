@@ -13,8 +13,8 @@ namespace InstaDev.Controllers
         [Route("Index")]
         public IActionResult Index()
         {
+            ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             ViewBag.Usuarios = usuarioModel.Listar();
-            ViewBag.UserName = HttpContext.Session.GetString("_Username");
             ViewBag.Nome = HttpContext.Session.GetString("_Nome");
             ViewBag.Email = HttpContext.Session.GetString("_Email");
             ViewBag.Senha = HttpContext.Session.GetString("_Senha");
@@ -35,7 +35,7 @@ namespace InstaDev.Controllers
 
             usuarioModel.Alterar(alterarUsuario);
 
-            return LocalRedirect("~/Editar/Index");
+            return LocalRedirect("~/Login/Index");
         }
 
         [Route("Deletar/{id}")]

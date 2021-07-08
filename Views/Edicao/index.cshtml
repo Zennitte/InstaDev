@@ -11,11 +11,11 @@
 
     <div class="icones">
         <nav class="nav_icones">
-            <a asp-area = "" asp-controller = "Feed" asp-action = "Listar"><img src="~/Img_Edicao/Vector (2).png" alt=""></a> 
+            <a asp-area="" asp-controller="Feed" asp-action="Listar"><img src="~/Img_Edicao/Vector (2).png" alt=""></a>
             <img src="~/Img_Edicao/plane 1.png" alt="">
             <img src="~/Img_Edicao/Vector (1).png" alt="">
             <img src="~/Img_Edicao/compass 1.png" alt="">
-            <img src="~/Img_Edicao/thank-you 1.png" alt="">
+            <img style="width: 32px; height: 32px; border-radius: 50px;" src="~/img/Perfil/perfil.png" alt="">
         </nav>
     </div>
 
@@ -28,11 +28,12 @@
 
         <h3 class="titulo">Editar Perfil</h3>
 
-        <img class="Foto" src="~/Img_Edicao/thank-you 2.png" alt="Perfil">
+        <img class="Foto" style="width: 50px; height: 50px; border-radius: 100px;" src="~/img/Perfil/perfil.png"
+            alt="Perfil">
 
         <div class="Perfil">
 
-            <p>yes_baby</p>
+            <p>@ViewBag.UserName</p>
             <a href="">Alterar foto de perfil</a>
 
         </div>
@@ -73,9 +74,10 @@
                 <button class="enviar_botao" type="submit">Enviar</button>
 
             </form>
-            
+
             <div class="deletar_link">
-                <a asp-area = "" asp-controller = "Edicao" asp-action = "Deletar" asp-route-id = "@ViewBag.IdUsuario">Desativar minha conta definitivamente</a>
+                <a asp-area="" asp-controller="Edicao" asp-action="Deletar" asp-route-id="@ViewBag.IdUsuario">Desativar
+                    minha conta definitivamente</a>
             </div>
 
         </div>

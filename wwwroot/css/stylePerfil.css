@@ -86,7 +86,7 @@ header {
     width: 32px;
     height: 32px;
     border-radius: 50px;
-    background: black;
+    
 }
 
 /* main */
@@ -109,7 +109,7 @@ header {
     width: 152px;
     height: 154px;
     border-radius: 115.5px;
-    background-color: black;
+   
 }
 
 .inf_box {
